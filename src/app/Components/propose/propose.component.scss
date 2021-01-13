@@ -1,0 +1,27 @@
+ion-header {
+    ion-toolbar {
+        --background: var(--ion-color-yellow);
+        .btn-close {
+            --color: var(--ion-color-white);
+        }
+    }
+}
+
+ion-content {
+    background-color: var(--ion-color-blue);
+    ion-item {
+        --padding-start: 8px;
+        --ripple-color: transparent;
+        ion-label {
+            font-size: 16px;
+            font-family: "Fivo_sans_medium";
+            color: var(--ion-color-blue);
+        }
+        ion-radio {
+            margin-inline-end: 20px;
+            --border-width: 1px;
+            --color: var(--ion-color-blue);
+            --color-checked: var(--ion-color-yellow);
+        }
+    }
+}

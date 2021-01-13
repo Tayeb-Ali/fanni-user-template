@@ -1,0 +1,40 @@
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import "./theme/fonts.scss";
+@import '~animate.css/animate.min.css';
+ion-header {
+    &.header-md:after {
+        background: none;
+    }
+    border-bottom-color: white;
+    ion-toolbar {
+        padding-left: 16px;
+        padding-bottom: 0px;
+        border-radius: 0px 0px 30px 30px;
+        --background: var(--ion-color-primary);
+        ion-title {
+            font-family: tbold;
+            color: white;
+        }
+    }
+}
+
+.propose-modal {
+    --border-radius: 20px 20px 0px 0px;
+    --height: 50%;
+    align-items: flex-end;
+}
+
+.propose-modal1 {
+    --border-radius: 20px 20px 0px 0px;
+    --height: 50%;
+    align-items: flex-end;
+}

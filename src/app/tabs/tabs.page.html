@@ -1,0 +1,22 @@
+<ion-tabs (ionTabsWillChange)="getSelectedTab()">
+
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+            <ion-icon color="danger" name="apps-outline"></ion-icon>
+            <ion-label color="danger" *ngIf="activeTab=='/tabs/home'">الرئيسية</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="notifications">
+            <ion-badge color="danger">66</ion-badge>
+            <ion-icon color="danger" name="notifications">
+            </ion-icon>
+            <ion-label color="danger" *ngIf="activeTab=='/tabs/notifications'">الإشعارات</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="profile">
+            <ion-icon color="danger" name="person-outline"></ion-icon>
+            <ion-label color="danger" *ngIf="activeTab=='/tabs/profile'">الحساب</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+
+</ion-tabs>

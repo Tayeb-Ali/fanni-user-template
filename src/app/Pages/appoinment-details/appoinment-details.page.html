@@ -1,0 +1,126 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" class="ion-no-margin">
+            <ion-back-button defaultHref="tabs/home" color="light" icon="chevron-back" mode="md" class="btn-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">
+            تفاصيل الطلب</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <!-- <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+    <ion-card-title>Awesome Title</ion-card-title> -->
+            <ion-segment scrollable="true" mode="ios" [(ngModel)]="tabButton">
+
+                <ion-segment-button value="main">
+                    <ion-label>معلومات</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="problem">
+                    <ion-label>تفاصيل</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-card-header>
+
+        <ion-card-content class="animate__animated animate__backInLeft animate__delay-.2s" *ngIf="tabButton == 'main'">
+            <ion-item button class="user">
+                <ion-label slot="start">
+                    <ion-avatar>
+                        <img src="assets/images/profile.jpg">
+                    </ion-avatar>
+                    <p>علي حسن</p>
+                </ion-label>
+                <div slot="end">
+                    <ion-icon class="animate__animated animate__pulse animate__delay-1s connaction" color="primary" name="call-outline"></ion-icon>
+                    &nbsp;
+                    <ion-icon class="connaction animate__animated animate__pulse animate__delay-1s" color="primary" name="chatbubble-ellipses-sharp"></ion-icon>
+                </div>
+            </ion-item>
+            <p>المطلوب</p>
+            <h3>كهربائي</h3>
+            <ion-item class="animate__animated animate__backInRight animate__delay-.4s">
+                <div slot="start">
+                    <p>التاريخ</p>
+                    <p>12-10-2020</p>
+                </div>
+                <div slot="end">
+                    <p>الزمن</p>
+                    <p>12:10 - 13:10</p>
+                </div>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="map" color="primary" slot="start"></ion-icon>
+                <ion-label>
+                    <p>العنوان</p>
+                    <p>
+                        الجريف غرب- مربع 84
+                    </p>
+                </ion-label>
+            </ion-item>
+        </ion-card-content>
+
+        <ion-card-content *ngIf="tabButton == 'problem'" class="animate__animated animate__backInLeft animate__delay-.1s">
+            <ion-label>تفاصيل المشكلة:</ion-label>
+
+            <p><b>الصور</b></p>
+            <ion-grid fixed>
+                <ion-row>
+                    <ion-col size="6">
+                        <ion-img src="assets/images/1.jpeg"></ion-img>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-img src="assets/images/2.jpg"></ion-img>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-img src="assets/images/3.jpeg"></ion-img>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-img src="assets/images/1.jpeg"></ion-img>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+
+            <br/>
+            <p><b>التفاصيل</b></p>
+            <p>
+                لدي مشكلة في كهرباء المنزل, يوجد ضغط على المحول كما موضح الإستهلاك بالصور.
+            </p>
+        </ion-card-content>
+
+    </ion-card>
+    <ion-button class="animate__animated animate__backInLeft animate__delay-.2s" (click)="sendPropose()" color="success" expand="full"><b>اجراء</b>
+        <ion-icon slot="start" name="build-outline"></ion-icon>
+    </ion-button>
+
+    <ion-card>
+        <ion-card-header>
+            <ion-card-subtitle>حالة العمل</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-item class="animate__animated animate__backInLeft animate__delay-.4s" lines="full" color="secondary">
+                <ion-icon class="icon" name="pin" slot="start"></ion-icon>
+                <ion-label>تقديم عرض</ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__backInRight animate__delay-.6s" lines="full" color="tertiary">
+                <ion-icon class="icon" name="pin" slot="start"></ion-icon>
+                <ion-label>في الطريق</ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__backInLeft animate__delay-.8s" color="medium">
+                <ion-icon name="radio-button-on-sharp" slot="start"></ion-icon>
+                <ion-label>جاري العمل</ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__backInRight animate__delay-.10s">
+                <ion-icon name="radio-button-on-sharp" slot="start"></ion-icon>
+                <ion-label>انجزت العمل</ion-label>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-app>
+    <!-- <ion-split-pane contentId="main-content"> -->
+    <ion-menu contentId="main-content" dir="rtl" side="start" contentId="main-content" type="push">
+        <ion-content>
+            <ion-menu-toggle auto-hide="false">
+                <div class="menu-header-bg"></div>
+                <div class="header-content">
+                    <img src="assets/images/profile.jpg">
+                    <ion-label>
+                        <h2>أ. الطيب حسن</h2>
+                        <p>مهندس برمجيات</p>
+                    </ion-label>
+                </div>
+                <!-- <div class="action-button">
+                    <ion-button routerLink="/add-property" routerDirection="forward">
+                        <ion-icon slot="start" name="add"></ion-icon>
+                        إضافة عقار
+                    </ion-button>
+                </div> -->
+                <ion-list line="none" class="menu-item active">
+                    <ion-item routerLink="/" routerDirection="forward">
+                        <ion-icon slot="start" name="notifications-outline">
+                        </ion-icon>
+                        الرئيسية
+                    </ion-item>
+
+                    <ion-item routerLink="/notifications" routerDirection="forward">
+                        <ion-icon slot="start" name="notifications-outline">
+                        </ion-icon>
+                        الإشعارات
+                    </ion-item>
+
+                    <ion-item routerLink="/" routerDirection="forward">
+                        <ion-icon name="chatbubbles-outline" slot="start"></ion-icon>
+                        الاتصال بناء </ion-item>
+
+                    <ion-item routerLink="/" routerDirection="forward">
+                        <ion-icon name="call-outline" slot="start"></ion-icon>
+                        عن التطبيق </ion-item>
+                </ion-list>
+            </ion-menu-toggle>
+        </ion-content>
+    </ion-menu>
+    <!-- </ion-split-pane> -->
+    <ion-router-outlet id="main-content" main [dir]="dir"></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">تفاصيل الخدمة</ion-title>
+        <ion-buttons slot="end">
+            <ion-back-button color="light" defaultHref="/tabs/home"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="padding">
+
+
+    <ion-item>
+        <ion-label position="floating">الزمن المناسب للعمل</ion-label>
+        <ion-datetime [(ngModel)]="appoinment.date" min="2020" display-format="YY/MM/DD HH:mm"></ion-datetime>
+        <ion-icon item-end slot="end" class="map-icon" color="primary" name="calendar-outline"></ion-icon>
+    </ion-item>
+
+
+    <div #mapElement class="map"></div>
+
+    <ion-item>
+        <ion-label position="floating">تحديد الموقع والعنوان</ion-label>
+        <ion-input type="text" [value]="appoinment.address" [(ngModel)]="appoinment.address"></ion-input>
+        <ion-icon item-end slot="end" class="map-icon" color="primary" name="map" (click)="pickLocation()"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">صف المشكلة</ion-label>
+        <ion-textarea [(ngModel)]="appoinment.proplem" placeholder="اضف بعض المعلومات عن المطلوب"></ion-textarea>
+        <ion-icon item-end slot="end" class="map-icon" color="primary" name="document-text-outline" (click)="pickLocation()"></ion-icon>
+    </ion-item>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <input type="file" #fileInput (change)="uploadFile($event)" hidden="true" accept="image/*" />
+        <ion-fab-button color="danger" (click)="selectImageSource()">
+            <ion-icon name="camera-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-button expand="full" (click)="updateProperty()">
+            <ion-icon slot="start" name="save-outline"></ion-icon>
+            إرسال الطلب </ion-button>
+    </ion-toolbar>
+</ion-footer>

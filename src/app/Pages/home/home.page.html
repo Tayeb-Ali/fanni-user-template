@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">
+            الرئيسية
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="padding">
+    <ion-grid>
+        <ion-row>
+            <ion-col *ngFor="let item of data; let i=index" [routerLink]="['/request-services', item.id ]" size="4" routerDirection="forward" class="animate__animated animate__backInRight animate__delay-.{{i*3}}s">
+                <ion-card color="primary">
+                    <ion-icon color="medium" src="assets/icon/{{item.logo}}"></ion-icon>
+                    <ion-text>
+                        <p class="home-button ion-text-center">{{item.title}}</p>
+                    </ion-text>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

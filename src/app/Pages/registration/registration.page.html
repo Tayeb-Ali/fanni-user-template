@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>التسجيل</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <br/>
+    <ion-card>
+        <ion-item>
+            <ion-label> الاسم بالكامل
+                <ion-text color="danger">*</ion-text>
+            </ion-label>
+            <ion-input required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>البريد الإلكتروني
+            </ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>الهاتف
+                <ion-text color="danger">*</ion-text>
+            </ion-label>
+            <ion-input required></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label>كلمة السر
+                <ion-text color="danger">*</ion-text>
+            </ion-label>
+            <ion-input required></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" href='/tabs/home'>
+            <ion-icon slot="start" name="log-in-outline"></ion-icon>
+            دخول
+        </ion-button>
+
+        <p class="ion-text-center">هل نسية كلمة السر؟
+            <a href="/">إستعادة</a>
+
+            <p class="ion-text-center">ليس لديك حساب؟<a href="/"><b>سجل معنا الإن!</b></a></p>
+
+    </ion-card>
+
+    <p class="ion-text-center" style="color: red">v 1.0.0</p>
+</ion-content>

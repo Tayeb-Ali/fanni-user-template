@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title header-title>العرض</ion-title>
+        <ion-buttons slot="end" class="ion-no-margin">
+            <ion-button (click)="closeModal()" mode="md" fill="clear" class="btn-close">
+                <ion-icon color="danger" slot="icon-only" name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding-horizontal" dir="rtl">
+    <ion-list class="ion-no-padding">
+        <ion-item>
+            <ion-label position="floating">السعر المقترح</ion-label>
+            <ion-input type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">الزمن</ion-label>
+            <ion-datetime display-format="DD.MM.YYYY HH:mm"></ion-datetime>
+        </ion-item>
+
+        <ion-button color="success" expand="full">
+            <ion-icon slot="start" name="send"></ion-icon>
+            <b>ارسال العرض</b>
+        </ion-button>
+    </ion-list>
+</ion-content>
